@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, projection, null, null, null);
-       // System.out.println("Cursor is "+cursor.moveToFirst());
+
 
         if (cursor != null && cursor.moveToFirst()) {
             columnIndex = cursor.getColumnIndex(MediaStore.Images.Media._ID);
@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                 image_count=image_count+1;
                 ic="Image Count is: "+image_count;
                 imageCount.setText(ic);
-               // System.out.println("ImageCount "+image_count);
+
             } while (cursor.moveToNext());
             cursor.close();
         }
